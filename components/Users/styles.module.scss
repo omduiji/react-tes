@@ -4,9 +4,43 @@
     list-style: none;
     width: 100vw;
     order: 2;
+    li {
+        
+        button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1em 0;
+            img {
+                border-radius: 50%;
+                flex-basis: 50%;
+                
+            }
+            span {
+                // flex-basis: 30%;
+                text-align: left;
+                
+            }
+        }
+    }
 
     @media (min-width: 500px) {
         max-width: 32vw;
         order: 1;
+        li {
+        
+            button {
+                justify-content: flex-start;
+                padding-left: 3em;
+                img {
+                    border-radius: 50%;
+                    
+                }
+                span {
+                    text-align: left;
+                }
+            }
+        }
+        
     }
 }

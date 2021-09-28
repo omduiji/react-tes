@@ -9,7 +9,14 @@ import { UsersProvider } from '../stores/users'
 const Home = () => {
 
   
-  const [user, setUser] = useState(null)
+  const [user, setUser] = useState({
+    id: 1,
+    last_name:'Peck',
+    first_name:'Kalli',
+    photo: '/people/1.jpg',
+    company: 'King, Hoeger and Mann',
+    title: 'Doctor',
+  },)
   
   return (
     <Layout>

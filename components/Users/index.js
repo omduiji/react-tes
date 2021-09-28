@@ -2,10 +2,12 @@ import React, { useContext, useEffect, useState } from 'react';
 import { usersContext } from '../../stores/users';
 import User from '../User';
 import styles from './styles.module.scss';
+import Button from '../Button';
+
 
 const Users = ({ setUser, user: currentUser }) => {
   const [users, dispatch] = useContext(usersContext);
-  
+
   useEffect(() => {
     const getUsers = async () => {
       const res = await fetch('/api/users');
@@ -17,25 +19,33 @@ const Users = ({ setUser, user: currentUser }) => {
       });
     };
 
-    getUsers(); 
+    getUsers();
   }, []);
-  
-    
-  
-  
-  if (!users.length) return null;
 
+
+
+
+  if (!users.length) return null;
+  console.log(styles.users, 'styles')
+  const handleClick = (e) => {
+    
+  };
   return (
-    <ul className={styles.users}>
-      {users.map((user) => (
-        <User
-          key={user.id}
-          user={user}
-          setUser={setUser}
-          active={currentUser?.id === user.id}
-        />
-      ))}
-    </ul>
+    <div>
+      <ul className={styles.users}>
+        {users.map((user) => (
+          <User
+            key={user.id}
+            user={user}
+            setUser={setUser}
+            active={currentUser?.id === user.id}
+          />
+        ))}
+      </ul>
+      <Button handleClick={handleClick}>Collapse</Button>
+    </div>
+
+
   );
 };
 
