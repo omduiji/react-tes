@@ -18,7 +18,6 @@ const Users = ({ setUser, user: currentUser }) => {
     };
 
     getUsers();
-    // setUser(users[0]);
   }, []);
 
   if (!users.length) return null;

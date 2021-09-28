@@ -6,12 +6,24 @@ import Input from '../Input';
 import styles from './styles.module.scss';
 
 const UserCard = ({ user }) => {
+
   const [editUser, setEditUser] = useState(user);
   const [isEditMode, setIsEditMode] = useState(false);
-  const [, dispatch] = useContext(usersContext);
+  const [users, dispatch] = useContext(usersContext);
   const handleClick = (e) => {
-    isEditMode ? setIsEditMode(false) : setIsEditMode(true);
+    if(!isEditMode) {
+      setIsEditMode(true);
+      return
+    }
+    dispatchUpdatedUser(editUser)
   };
+  const dispatchUpdatedUser = (user) => {
+    dispatch({
+      type: 'updateUser',
+      payload: user,
+    });
+    setIsEditMode(false);
+  }
   useEffect(() => {
     setEditUser(user);
   }, [user]);
