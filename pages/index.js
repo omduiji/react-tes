@@ -5,9 +5,12 @@ import Users from '../components/Users'
 import UserCard from '../components/UserCard'
 import { UsersProvider } from '../stores/users'
 
-const Home = () => {
-  const [user, setUser] = useState(null)
 
+const Home = () => {
+
+  
+  const [user, setUser] = useState(null)
+  
   return (
     <Layout>
       <Head>

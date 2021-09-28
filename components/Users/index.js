@@ -5,7 +5,7 @@ import styles from './styles.module.scss';
 
 const Users = ({ setUser, user: currentUser }) => {
   const [users, dispatch] = useContext(usersContext);
-
+  
   useEffect(() => {
     const getUsers = async () => {
       const res = await fetch('/api/users');
@@ -17,9 +17,12 @@ const Users = ({ setUser, user: currentUser }) => {
       });
     };
 
-    getUsers();
+    getUsers(); 
   }, []);
-
+  
+    
+  
+  
   if (!users.length) return null;
 
   return (

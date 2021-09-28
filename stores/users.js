@@ -20,6 +20,8 @@ const reducer = (state, { type, payload }) => {
         return users
       case 'setUsers':
         return payload
+      case 'getUsers':
+        return {...state}
       default:
         throw new Error()
     }
@@ -27,6 +29,5 @@ const reducer = (state, { type, payload }) => {
 
 export const UsersProvider = ({ children }) => {
     const usersReducer = useReducer(reducer, [])
-
     return <Provider value={usersReducer}>{children}</Provider>;
 };
