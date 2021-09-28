@@ -7,6 +7,9 @@
     padding: 20px;
     width: 100%;
     border-bottom: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     @media (min-width: 500px) {
         max-width: 68vw;
@@ -14,6 +17,11 @@
         position: static;
         border-left: 1px solid #eee;
         border-bottom: none;
+        align-self: center;
+        margin-top: 1em;
+    }
+    h1 {
+        margin: 0;
     }
 
     p {
@@ -24,5 +32,6 @@
     img {
         width: 200px;
         height: 200px;
+        border-radius: 50%;
     }
 }

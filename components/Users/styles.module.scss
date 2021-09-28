@@ -4,6 +4,7 @@
     list-style: none;
     width: 100vw;
     order: 2;
+    border-right: 1px solid #eee;
     li {
         
         button {
@@ -19,7 +20,7 @@
             span {
                 // flex-basis: 30%;
                 text-align: left;
-                
+                min-width: 100px; 
             }
         }
     }
@@ -43,4 +44,5 @@
         }
         
     }
+   
 }

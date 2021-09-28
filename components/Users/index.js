@@ -31,7 +31,8 @@ const Users = ({ setUser, user: currentUser }) => {
     
   };
   return (
-    <div>
+    <div className={styles.users}>
+      <Button handleClick={handleClick}>Collapse</Button>
       <ul className={styles.users}>
         {users.map((user) => (
           <User
@@ -42,7 +43,7 @@ const Users = ({ setUser, user: currentUser }) => {
           />
         ))}
       </ul>
-      <Button handleClick={handleClick}>Collapse</Button>
+      
     </div>
 
 
