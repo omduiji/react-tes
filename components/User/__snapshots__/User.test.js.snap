@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render User 1`] = `
+<DocumentFragment>
+  <li
+    class="user"
+  >
+    <button
+      type="button"
+    >
+      <img
+        src="test.jpg"
+      />
+      <span>
+        JaneDoe
+      </span>
+    </button>
+  </li>
+</DocumentFragment>
+`;
+
+exports[`should render active User 1`] = `
+<DocumentFragment>
+  <li
+    class="user active"
+  >
+    <button
+      type="button"
+    >
+      <img
+        src="test.jpg"
+      />
+      <span>
+        JaneDoe
+      </span>
+    </button>
+  </li>
+</DocumentFragment>
+`;

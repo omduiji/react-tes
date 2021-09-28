@@ -1,0 +1,12 @@
+.users {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    width: 100vw;
+    order: 2;
+
+    @media (min-width: 500px) {
+        max-width: 32vw;
+        order: 1;
+    }
+}

@@ -1,0 +1,25 @@
+.fieldSet {
+    border: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 250px;
+}
+
+.label {
+    font-size: 1.2rem;
+    margin: 0.75em 0 0.25em 0;
+    text-align: left;
+}
+
+.input {
+    margin: 0.75em 0;
+    padding: 0 7px;
+    width: 100%;
+}
+
+.label + .input {
+    margin-top: 0;
+}

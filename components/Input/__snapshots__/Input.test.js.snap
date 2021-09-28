@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render Input 1`] = `
+<DocumentFragment>
+  <fieldset
+    class="fieldSet"
+  >
+    <label
+      class="label"
+      for="test_label"
+    >
+      test label
+    </label>
+    <input
+      class="input"
+      id="test_label"
+      type="text"
+      value=""
+    />
+  </fieldset>
+</DocumentFragment>
+`;
